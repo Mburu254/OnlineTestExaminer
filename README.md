@@ -1,11 +1,10 @@
-== README
 
 # OnlineTestExaminer
 
 # Requirements and runtime instructions to get this application up and running:
 
 * Ruby version
-ruby 2.2.3p173
+ruby 2.2.3
 
 * Rails version
 Rails 4.2.4
