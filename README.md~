@@ -6,9 +6,6 @@
 * Ruby version
 ruby 2.2.3
 
-* Rails version
-Rails 4.2.4
-
 * System dependencies
  mysql2
 
