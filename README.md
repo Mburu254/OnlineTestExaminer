@@ -1,22 +1,17 @@
 
-# OnlineTestExaminer
+# Welcome to OnlineTestExaminer
 
-# Requirements and runtime instructions to get this application up and running:
+OnlineTestExaminer is online aptitude test examiner. Oganizations signup to create aptitude tests for prospective employees to take.
 
-* Ruby version
-ruby 2.2.3
+Oganizations
 
-* You need mysql2
+Prospective employees
+
 
 * routes: match ':controller(/:action(/:id))', :via => [:get, :post]
 
+* Contributors
+Isaac Yeboah, Paul Njuguna, Maxwell Obi
 
-* Db_name: testExaminer_development
-![Screenshot](screenshot.png)
-
-* adapter: mysql2
-username: root
-password: test-examiner
-
-* bin/rails server
-http://localhost:3000
+* License
+This project is licensed by MIT License (MIT)
