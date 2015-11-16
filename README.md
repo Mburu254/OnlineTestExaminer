@@ -11,7 +11,7 @@ ruby 2.2.3
 * routes: match ':controller(/:action(/:id))', :via => [:get, :post]
 
 
-*Db_name: testExaminer_development
+* Db_name: testExaminer_development
 ![Screenshot](screenshot.png)
 
 * adapter: mysql2
