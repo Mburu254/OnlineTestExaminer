@@ -1,5 +1,5 @@
 
-# Welcome to OnlineTestExaminer
+# Welcome to Samber, OnlineTestExaminer
 
 OnlineTestExaminer is online aptitude test examiner. A company or organization will have the ability to create an account, create aptitude tests and administer them to potential employees. Potential employees will get an invite with login credentials where they can proceed to take the test online. Tests are timed. The system is  managed by the company. The application can handle multiple organizations and multiple potential employees at a go.
 
