@@ -19,8 +19,6 @@ The test will contain multiple choice questions for the aptitude. Candidates can
 
 To begin with,the application will run on the SQLite3 server
 
-* routes: match ':controller(/:action(/:id))', :via => [:get, :post]
-
 Contributors: 
 * Isaac Yeboah 
 * Paul Njuguna
