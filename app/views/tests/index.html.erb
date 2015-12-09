@@ -1,0 +1,45 @@
+<%  provide(:title, 'All Test') %>
+<div class="container-fluid">
+<div class="row">
+  <h1>All Tests</h1>
+
+  <div class="col-md-2">
+    Welcome! <%= @user.name %>, <%= @user.email %>
+  </div>
+
+  <div class="col-md-1 col-md-offset-10">
+    <%= link_to("Add New Test", new_user_test_path(@user), class: "btn btn-primary btn-sm") %>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-2">
+    <p class="bg-info"><%= pluralize(@tests.size, 'test') %> found</p>
+  </div>
+  <div class="col-md-12">
+    <table class="table table-hover">
+    <tr>
+      <th>Name</th>
+      <th>Test Describtion</th>
+      <th>Test Time</th>
+      <th>Created at</th>
+      <th>Actions</th>
+    </tr>
+    <% @tests.each do |test| %>
+    <tr>
+      <td><%= test.name %></td>
+      <td><%= test.describtion %></td>
+      <td><%= test.time%></td>
+      <td><%= test.created_at%></td>
+      <td class="actions">
+        <%= link_to "Show", user_test_path(@user, test), class: "btn btn-default btn-sm"%>
+        <%= link_to "Edit", edit_user_test_path(@user, test), class: "btn btn-default btn-sm" %>
+        <%= link_to "Delete", user_test_path(@user, test), method: :delete, 
+        data: { confirm: "Are you sure?" }, class: "btn btn-default btn-sm"%>
+      </td>
+    </tr>
+    <% end %>
+    </table>
+  </div>
+</div>
+</div>
+

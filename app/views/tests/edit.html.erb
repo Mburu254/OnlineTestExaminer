@@ -1,0 +1,25 @@
+<% provide(:title, 'Edit Test')	%>
+<div class="container-fluid">
+<h1>Edit Test</h1>
+<div class="row">
+	<div class="col-md-1 col-md-offset-10">
+	  <%= link_to("Back", user_tests_path, class: "btn btn-primary btn-sm") %>
+	</div>
+
+	<div class="col-md-6 col-md-offset-3">
+		<%=	form_for @test, url: user_test_path do |f| %>
+
+			<%=	f.label	:name %>
+			<%=	f.text_field :name, class: 'form-control', placeholder: 'Aptitude-1'%>
+
+			<%=	f.label :describtion %>
+			<%= f.text_area(:describtion, class: 'form-control', rows: '6') %>
+
+			<%=	f.label :time %>
+			<%= f.time_field(:time, class: 'form-control') %>
+			
+			<%=	f.submit "Create test", class: "btn btn-primary" %>
+		<% end %>
+	</div>
+</div>
+</div>

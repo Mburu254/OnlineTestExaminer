@@ -1,0 +1,27 @@
+<%	provide(:title,	'All Candidate')	%>
+<div class="container-fluid">
+<h1>Show Candidate</h1>
+  <div class="row">
+    <div class="col-md-1">
+        <%= link_to("Back", user_test_candidates_path, class: "btn btn-primary btn-sm") %>
+    </div>
+  </div>
+  <div class="row">
+  <div class="col-md-12">
+    <table class="table table-hover">
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Score</th>
+      </tr>
+      <tr>
+        <td><%= @candidate.name %></td>
+        <td><%= @candidate.email %></td>
+        <td><%= @candidate.score %></td>
+      </tr>
+    </table>
+  </div>
+  </div>
+</div>
+
+

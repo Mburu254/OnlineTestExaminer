@@ -1,0 +1,30 @@
+<% provide(:title, 'All questions')	%>
+<h1>Show Question</h1>
+<div class="container-fluid">
+	<div class="row">
+	<h1>Preview of Question</h1>
+	  <div class="col-md-1 col-md-offset-10">
+	    <%= link_to("Back", user_test_questions_path, class: "btn btn-primary btn-sm") %>
+	  </div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 col-md-offset-4">
+			<%=	form_for @question, url: user_test_questions_path do |f| %>
+			<%=	f.label	:q, class:'radio-inline' %>
+			<%= @question.number %>.  <%= @question.content %><br /> <br />
+
+			<%=	f.label :A, class:'radio-inline' %>
+			<%= @question.A %>.  <%= f.radio_button :A, class: 'radio-inline' %> 
+
+			<%=	f.label :B, class: 'radio-inline' %>
+			<%= @question.B %>.  <%= f.radio_button :B, class: 'radio-inline' %> 
+
+			<%=	f.label :C, class: 'radio-inline' %>
+			<%= @question.C %>.  <%= f.radio_button :C, class: 'radio-inline' %> 
+
+			<%=	f.label :D, class: 'radio-inline' %>
+			<%= @question.D %>.  <%= f.radio_button :D, class: 'radio-inline' %> 
+			<% end %>
+		</div>
+	</div>
+</div>

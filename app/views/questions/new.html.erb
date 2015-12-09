@@ -1,0 +1,43 @@
+<% provide(:title, 'New Question')	%>
+<h1>Create Question</h1>
+<div class="container-fluid">
+<div class="row">
+  <div class="col-md-1 col-md-offset-10">
+    <%= link_to("Back", user_test_questions_path, class: "btn btn-primary btn-sm") %>
+  </div>
+</div>
+
+<div class="row">
+	<div class="col-md-4 col-md-offset-4">
+
+		<%= form_for @question, url: user_test_questions_path do |f| %>
+		
+		<%=f.label(:number, "Number")%>
+		<%= f.select :number, 1..@question_count, class: 'form-control' %>
+		
+		<%=f.label(:content, "Content")%>
+		<%= f.text_area :content, rows: '6', class: 'form-control' %>
+		
+		<%=f.label(:A, "A")%>
+		<%= f.text_field :A, class: 'form-control' %>
+		
+		<%=f.label(:B, "B")%>
+		<%= f.text_field :B, class: 'form-control' %>
+
+		<%=f.label(:C, "C")%>
+		<%=f.text_field :C, class: 'form-control' %>
+
+		<%=f.label(:D, "D")%>
+		<%= f.text_field :D, class: 'form-control' %>
+		
+		<%=f.label(:answer, "Answer")%>
+		<%= f.text_field :answer, class: 'form-control' %>
+		
+		<%=f.label(:mark, "Mark")%>
+		<%= f.text_field :mark, class: 'form-control' %>
+	
+		<%=	f.submit "Set", class: 'btn btn-primary btn-sm' %>
+		<% end %>
+	</div>
+</div>
+</div>

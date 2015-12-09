@@ -1,0 +1,41 @@
+<%	provide(:title,	'All Candidates')	%>
+<h1>All Candidates</h1>
+<div class="container-fluid">
+  <div class="row">
+  <div class="col-md-1">
+    <%= link_to("Back", user_tests_url, class: "btn btn-primary btn-sm") %>
+  </div>
+
+  <div class="col-md-1 col-md-offset-11">
+    <%= link_to("Add", new_user_test_candidate_path, class: "btn btn-primary btn-sm") %>
+  </div>
+
+  <div class="col-md-2">
+    <p class="bg-info"><%= pluralize(@candidates.size, 'candidate') %> found</p>
+  </div>
+
+    <div class="col-md-12">
+      <table class="table table-hover">
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Score</th>
+        <th>Actions</th>
+      </tr>
+      <% @candidates.each do |candidate| %>
+      <tr>
+        <td><%= candidate.name %></td>
+        <td><%= candidate.email %></td>
+        <td><%= candidate.score %></td>
+        <td class="actions">
+          <%= link_to "Show", user_test_candidate_path(@user, @test, candidate), class: "btn btn-default btn-sm"%>
+          <%= link_to "Edit", edit_user_test_candidate_path(@user, @test, candidate), class: "btn btn-default btn-sm" %>
+          <%= link_to "Delete", user_test_candidate_path(@user, @test, candidate), method: :delete, 
+          data: {comfirm: "Are you sure?"}, class: "btn btn-default btn-sm"%>
+        </td>
+      </tr>
+      <% end %>
+      </table>
+    </div>
+  </div>
+</div>
