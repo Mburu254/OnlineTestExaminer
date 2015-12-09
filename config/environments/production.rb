@@ -14,11 +14,22 @@ Rails.application.configure do
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
-  # Enable Rack::Cache to put a simple HTTP cache in front of your application
-  # Add `rack-cache` to your Gemfile before enabling this.
-  # For large-scale production use, consider using a caching reverse proxy like
-  # NGINX, varnish or squid.
-  # config.action_dispatch.rack_cache = true
+  # Don't care if the mailer can't send.
+  config.mandrill_mailer.default_url_options = { :host => 'samber.heroku.com' }
+  config.action_mailer.default_url_options = { :host => 'samber.heroku.com' }
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default :charset => "utf-8"
+
+  config.action_mailer.smtp_settings = {
+      :address              => "smtp.yahoo.com",
+      :port                 => 587,
+      :domain               => "yahoo.com",
+      :user_name            => "iyeboah1@yahoo.com",
+      :password             => "editor11",
+      :authentication       => :plain,
+      :enable_starttls_auto => true
+  }
 
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
