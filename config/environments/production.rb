@@ -15,20 +15,19 @@ Rails.application.configure do
   config.action_controller.perform_caching = true
 
   # Don't care if the mailer can't send.
-  config.mandrill_mailer.default_url_options = { :host => 'samber.heroku.com' }
-  config.action_mailer.default_url_options = { :host => 'samber.heroku.com' }
+  config.mandrill_mailer.default_url_options = { :host => ' https://protected-chamber-1068.herokuapp.com/ ' }
+  config.action_mailer.default_url_options = { :host => ' https://protected-chamber-1068.herokuapp.com/ ' }
   config.action_mailer.perform_deliveries = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.default :charset => "utf-8"
 
-  config.action_mailer.smtp_settings = {
-      :address              => "smtp.yahoo.com",
-      :port                 => 587,
-      :domain               => "yahoo.com",
-      :user_name            => "iyeboah1@yahoo.com",
-      :password             => "editor11",
-      :authentication       => :plain,
-      :enable_starttls_auto => true
+  ActionMailer::Base.smtp_settings = {
+    :address              => "smtp.mandrillapp.com",
+    :port                 => 587,
+    :user_name            => "bernard.adarkwah@meltwater.org",
+    :password             => "WH2Q0VWWdB7J1yHrsfFi6Q",
+    :authentication       => "plain",
+    :enable_starttls_auto => true
   }
 
   # Disable serving static files from the `/public` folder by default since
