@@ -10,12 +10,15 @@
   <div class="col-md-1 col-md-offset-10">
     <%= link_to("Add New Test", new_user_test_path(@user), class: "btn btn-primary btn-sm") %>
   </div>
+  <div class="item">
+      <img style="padding:10px" src="/assets/d.jpg" alt="b">
+  </div>
 </div>
 <div class="row">
   <div class="col-md-2">
     <p class="bg-info"><%= pluralize(@tests.size, 'test') %> found</p>
   </div>
-  <div class="col-md-12">
+    <div class="col-md-12">
     <table class="table table-hover">
     <tr>
       <th>Name</th>
