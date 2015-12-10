@@ -4,46 +4,42 @@ Rails.application.configure do
   # Code is not reloaded between requests.
   config.cache_classes = true
 
-  # Eager load code on boot. This eager loads most of Rails and
-  # your application in memory, allowing both threaded web servers
-  # and those relying on copy on write to perform better.
-  # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
-  # # Don't care if the mailer can't send.
-  # config.mandrill_mailer.default_url_options = { :host => ' https://protected-chamber-1068.herokuapp.com/ ' }
-  # config.action_mailer.default_url_options = { :host => ' https://protected-chamber-1068.herokuapp.com/ ' }
-  # config.action_mailer.perform_deliveries = true
-  # config.action_mailer.delivery_method = :smtp
-  # config.action_mailer.default :charset => "utf-8"
-
-  # ActionMailer::Base.smtp_settings = {
-  #   :address              => "smtp.mandrillapp.com",
-  #   :port                 => 587,
-  #   :user_name            => "bernard.adarkwah@meltwater.org",
-  #   :password             => "WH2Q0VWWdB7J1yHrsfFi6Q",
-  #   :authentication       => "plain",
-  #   :enable_starttls_auto => true
-  # }
-
-  config.action_mailer.default_url_options = { :host => 'https://protected-chamber-1068.herokuapp.com' }
-  config.action_mailer.delivery_method = :smtp
+  # Don't care if the mailer can't send.
+  config.mandrill_mailer.default_url_options = { :host => ' https://protected-chamber-1068.herokuapp.com/ ' }
+  config.action_mailer.default_url_options = { :host => ' https://protected-chamber-1068.herokuapp.com/ ' }
   config.action_mailer.perform_deliveries = true
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.delivery_method = :smtp
   config.action_mailer.default :charset => "utf-8"
-  config.action_mailer.smtp_settings = {
-  address: "smtp.gmail.com",
-  port: 587,
-  domain: "https://protected-chamber-1068.herokuapp.com",
-  authentication: "plain",
-  enable_starttls_auto: true,
-  user_name: "isaac.yeboah@meltwater.org",
-  password: "editor11.meltwater"
-}
+
+  ActionMailer::Base.smtp_settings = {
+    :address              => "smtp.mandrillapp.com",
+    :port                 => 587,
+    :user_name            => "bernard.adarkwah@meltwater.org",
+    :password             => "WH2Q0VWWdB7J1yHrsfFi6Q",
+    :authentication       => "plain",
+    :enable_starttls_auto => true
+  }
+
+#   config.action_mailer.default_url_options = { :host => 'https://protected-chamber-1068.herokuapp.com' }
+#   config.action_mailer.delivery_method = :smtp
+#   config.action_mailer.perform_deliveries = true
+#   config.action_mailer.raise_delivery_errors = false
+#   config.action_mailer.default :charset => "utf-8"
+#   config.action_mailer.smtp_settings = {
+#   address: "smtp.gmail.com",
+#   port: 587,
+#   domain: "https://protected-chamber-1068.herokuapp.com",
+#   authentication: "plain",
+#   enable_starttls_auto: true,
+#   user_name: "isaac.yeboah@meltwater.org",
+#   password: "editor11.meltwater"
+# }
 
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
