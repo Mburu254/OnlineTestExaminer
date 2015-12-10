@@ -111,7 +111,7 @@ input {
 
 .pop_out {
 	margin-top: 20px;
-	z-index: 100;
+	margin-bottom: 0;
 }
 
 .slide_move {
@@ -128,6 +128,10 @@ input {
 	position: relative;
 	top: 30px;
 	left: 840px;
+}
+
+.bottom_move {
+	margin-bottom: 80px;
 }
 
 /*	footer	*/

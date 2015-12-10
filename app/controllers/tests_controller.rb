@@ -41,7 +41,7 @@
 
   def destroy
     test = Test.find(params[:id]).destroy
-    flash[:notice] = "Test '#{test.name}' Deleted successfully"
+    flash[:succes] = "Test '#{test.name}' Deleted successfully"
     redirect_to user_tests_url
   end
 

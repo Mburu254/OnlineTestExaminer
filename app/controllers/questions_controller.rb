@@ -20,7 +20,7 @@ class QuestionsController < ApplicationController
     @question = Question.new(question_params)
 
     if @question.save
-      flash[:notice] = "Question saved successfully"
+      flash[:success] = "Question saved successfully"
       redirect_to user_test_questions_path
 
     else
@@ -40,7 +40,7 @@ class QuestionsController < ApplicationController
     @question = Question.find(params[:id])
 
     if @question.update_attributes(question_params)
-      flash[:notice] = "Question updated successfully"
+      flash[:success] = "Question updated successfully"
       redirect_to user_test_questions_path
 
     else
@@ -52,7 +52,7 @@ class QuestionsController < ApplicationController
 
   def destroy
     question = Question.find(params[:id]).destroy
-    flash[:notice] = "Question '#{question.number}' Deleted successfully"
+    flash[:success] = "Question '#{question.number}' Deleted successfully"
     redirect_to user_test_questions_path
   end
 

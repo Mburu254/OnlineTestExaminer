@@ -16,7 +16,7 @@ class CandidatesController < ApplicationController
   def create
     @candidate = Candidate.new(candidate_params)
     if @candidate.save
-        flash[:notice] = "Candidate saved sucessfully"
+        flash[:success] = "Candidate saved sucessfully"
         redirect_to user_test_candidates_url
     else
       render 'new'
@@ -30,7 +30,7 @@ class CandidatesController < ApplicationController
   def update
     @candidate = Candidate.find(params[:id])
     if @candidate.update_attrubutes(candidate_params)
-      flash[:notice] = "Candidate updated sucessfully"
+      flash[:success] = "Candidate updated sucessfully"
       redirect_to user_test_candidates_url
     else
       render 'edit'
@@ -39,7 +39,7 @@ class CandidatesController < ApplicationController
 
   def destroy
     candidate = Candidate.find(params[:id]).destroy
-    flash[:notice] = "Candidate '#{candidate.name}' deleted sucessfully"
+    flash[:success] = "Candidate '#{candidate.name}' deleted sucessfully"
     redirect_to user_test_candidates_url
   end
 
